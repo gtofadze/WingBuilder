@@ -29,9 +29,9 @@ public class WingBuilder {
 
         double[] points = new double[pointsPerSection * 3];
 
-        double x_index = 0;
-        double y_index = 1;
-        double z_index = 3;
+        int x_index = 0;
+        int y_index = 1;
+        int z_index = 2;
 
         for (int i = 0; i < pointsPerSection; i++) {
             double xi = chord/2 * (1 - Math.cos(i * Math.PI/pointsPerSection));
@@ -39,6 +39,14 @@ public class WingBuilder {
             double x = 0; //To implement
             double y = 0; //To implement
             double z = chord; //To implement
+
+            points[x_index] = x;
+            points[y_index] = y;
+            points[z_index] = z;
+
+            x_index += 3;
+            y_index += 3;
+            z_index += 3;
 
         }
 
