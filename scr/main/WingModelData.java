@@ -1,4 +1,4 @@
 public class WingModelData {
     private double[] coordinates;
-    private int[][] vertices;
+    private int[] triangles;
 }
